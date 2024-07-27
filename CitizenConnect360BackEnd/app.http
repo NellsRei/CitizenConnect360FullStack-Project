@@ -1,0 +1,95 @@
+POST http://localhost:3100/user/register
+Content-Type: application/json
+
+{
+    "username": "Jonathan",
+    "email":"joendambuki16@gmail.com",
+    "password": "1234Qwer@ty"
+
+}
+
+###########
+POST http://localhost:3100/user/login
+Content-Type: application/json
+
+{
+    "email":"tawan@gmail.com",
+    "password": "TWismy-name3"
+    # "email":"dovejane028@gmail.com",
+    # "password": "Hello@trial1"
+}
+
+##################
+POST http://localhost:3100/posts/
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJlNGFmMTJmYy01OGIzLTRmMzctYjM3Yi01MjM2YjBlNTgyMGEiLCJOYW1lIjoiTmVsbHkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE4MTI1NzQsImV4cCI6MTcyMTgxOTc3NH0.vMYXPWh009XtLFxgdwK8iGR14j0s2hqDBwTfunmOO8A
+
+{
+    "postDescription": "What a day it is?"
+}
+
+##################
+GET http://localhost:3100/posts/
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI3ODhlMDI4YS00YzMxLTRjY2UtYmEyZS1kMzU4ZTg3MGRkNjciLCJOYW1lIjoiSm9uYXRoYW4iLCJyb2xlIjoidXNlciIsImlhdCI6MTcyMTgwNDkyMywiZXhwIjoxNzIxODEyMTIzfQ.K3IbhmiIXy3ye62CPoXeI3apJGQVADZ-RgES8WlpaQc
+
+########################
+GET http://localhost:3100/posts/user/788e028a-4c31-4cce-ba2e-d358e870dd67
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI3ODhlMDI4YS00YzMxLTRjY2UtYmEyZS1kMzU4ZTg3MGRkNjciLCJOYW1lIjoiSm9uYXRoYW4iLCJyb2xlIjoidXNlciIsImlhdCI6MTcyMTY0ODY2NywiZXhwIjoxNzIxNjU1ODY3fQ.jUnDp4zSZgQ2TgOw2yYJLQUqa8lVGzvTgjeb1Ik3Ucs
+
+########################
+GET http://localhost:3100/posts/af9578a1-8d90-42fb-a7ac-b8e6099512c3
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJlNGFmMTJmYy01OGIzLTRmMzctYjM3Yi01MjM2YjBlNTgyMGEiLCJOYW1lIjoiTmVsbHkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE2NDg3NzAsImV4cCI6MTcyMTY1NTk3MH0.uq0hcFIqutkjxZp0J_VU__Cz-6ZiIIQikNsbzeS5grE
+
+
+
+########################
+DELETE http://localhost:3100/posts/30284da1-f7b5-4a08-9743-ccb385c4b357
+
+
+#######################
+GET http://localhost:3100/users
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJlNGFmMTJmYy01OGIzLTRmMzctYjM3Yi01MjM2YjBlNTgyMGEiLCJOYW1lIjoiTmVsbHkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE4MDk3NDksImV4cCI6MTcyMTgxNjk0OX0.HCEkuO1MlNMZTvcIE5taE1cOUjSrA0mjkePYv4Uj7cA
+
+#######################
+GET http://localhost:3100/users/34002008-ed0f-444a-8720-55f01354464f
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJkMDllM2Q5MC0xZGNiLTQyMzUtODdiZS03NDljZTcxNDQ5NDciLCJOYW1lIjoiTmVsbHkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjEzOTEwNzksImV4cCI6MTcyMTM5ODI3OX0.p5TK470TO1OtJ65a5c6tJlTI8oah3fOiAsilO7RkcKo
+
+#######################
+DELETE  http://localhost:3100/users/4c7109ea-4dd8-4139-b3f8-3329ebc2a2f0
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJkMDllM2Q5MC0xZGNiLTQyMzUtODdiZS03NDljZTcxNDQ5NDciLCJOYW1lIjoiTmVsbHkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjEzOTEwNzksImV4cCI6MTcyMTM5ODI3OX0.p5TK470TO1OtJ65a5c6tJlTI8oah3fOiAsilO7RkcKo
+
+
+######################
+POST http://localhost:3100/polls
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI0Nzc3ODliYi1iOGRlLTRmZGYtOTRiYy01ZDRlODUyODk1ZGQiLCJOYW1lIjoiVGF3YW4iLCJyb2xlIjoidXNlciIsImlhdCI6MTcyMTkxMDQwMywiZXhwIjoxNzIxOTE3NjAzfQ.p65sAf1thVNha2GnfBJrdVNH-J8b2zl8BB-jwvNLfSs
+
+{
+    "pollQuestion":"What do you think of our government?",
+    "pollChoices": ["Good", "Bad", "Unsure"]
+}
+
+########################
+GET http://localhost:3100/polls
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI0Nzc3ODliYi1iOGRlLTRmZGYtOTRiYy01ZDRlODUyODk1ZGQiLCJOYW1lIjoiVGF3YW4iLCJyb2xlIjoidXNlciIsImlhdCI6MTcyMTkwOTAzNiwiZXhwIjoxNzIxOTE2MjM2fQ.0Mne_D3VDGD8Rq_NE_fcB7D9QvMXrVqztsRY-zfdj28
+
+###########################
+GET http://localhost:3100/polls/67e119e5-43f7-4918-a9a5-abcb368f6620
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI3ODhlMDI4YS00YzMxLTRjY2UtYmEyZS1kMzU4ZTg3MGRkNjciLCJOYW1lIjoiSm9uYXRoYW4iLCJyb2xlIjoidXNlciIsImlhdCI6MTcyMTY0Njk0NSwiZXhwIjoxNzIxNjU0MTQ1fQ.6OwfPhA6M7Bqm_TPHA2hR2z7l1VvG_1QPTvy-9LEoV4
+
+###############################
+GET http://localhost:3100/polls/user/d09e3d90-1dcb-4235-87be-749ce7144947
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJkMDllM2Q5MC0xZGNiLTQyMzUtODdiZS03NDljZTcxNDQ5NDciLCJOYW1lIjoiTmVsbHkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE0MjE1NzIsImV4cCI6MTcyMTQyODc3Mn0.JVfLR2Z91l_CtJx2D2tP4q7P1H0lwJedaqXXUvvYG8c
+
+
+###################################
+POST http://localhost:3100/incident
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI0Nzc3ODliYi1iOGRlLTRmZGYtOTRiYy01ZDRlODUyODk1ZGQiLCJOYW1lIjoiVGF3YW4iLCJyb2xlIjoidXNlciIsImlhdCI6MTcyMTg5NzA1OSwiZXhwIjoxNzIxOTA0MjU5fQ.c9L5GwnMBIw9_7gW4MXeMnMdvxCw7PITi773SjZw0xk
+
+{
+    "multimedia":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.mtCEY4fJUfswRyqGT1N_xwHaE8%26pid%3DApi&f=1&ipt=cb3532f79a6b05ecbe4c574d2a30c96dbbcdfc824a5057fe7d56de76e22243fa&ipo=images",
+    "incidentDescription":"Worker Down",
+    "incidentLocation":"Mombasa"
+
+}

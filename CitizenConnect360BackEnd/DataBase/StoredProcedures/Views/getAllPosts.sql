@@ -1,0 +1,8 @@
+USE citizenConnect;
+GO
+CREATE OR ALTER PROCEDURE getAllPosts
+AS 
+BEGIN
+    SELECT * FROM Posts
+END
+GO
