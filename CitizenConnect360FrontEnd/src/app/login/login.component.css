@@ -1,0 +1,74 @@
+.container{
+    display: grid;
+    flex-direction: column;
+    font-family: "Playwrite DE Grund", cursive;
+    box-sizing: border-box;
+    height: 90vh;
+}
+.form{
+    width: 45vw;
+    height: 100%;
+    padding: 40px;
+    font-size: large;
+    grid-column: 1;
+    grid-row: 2; /* centers the div */
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    margin: auto;
+    
+}
+.form h1{
+    text-align: center;
+}
+form input{
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    padding: 10px;
+}
+form ::placeholder{
+    font-style: italic;
+    font-weight: 500;
+}
+form button{
+    border-radius: 20px;
+    padding: 10px;
+    width: 200px;
+    margin: auto;
+    background-color: #006D24;
+    color: white;
+    margin-top: 20px;
+}
+form p a{
+    text-decoration: none;
+    padding-left: 10px;
+}
+form a{
+    text-decoration: none;
+}
+.terms label{
+   padding-left: 10px;
+}
+.image{
+    /* background-color: aqua; */
+    grid-column: 2;
+    grid-row: 2;
+    width: 55vw;
+    background-image: url("../../assets/2peopletalking.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 575.98px) and (max-width: 991.98px){
+    .container{
+        display: block;
+    }
+    .form{
+        width: 100%;
+    }
+
+}

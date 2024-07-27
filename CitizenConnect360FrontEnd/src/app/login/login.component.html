@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="form">
+        <h1>LOG IN</h1>
+        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+            <label for="email">Email</label>
+            <span *ngIf="form.get('email')?.touched && !form.get('email')?.valid"><i>Email is required!!!!</i></span>
+            <input type="email" id="email" formControlName="email" placeholder="Email"required>
+            <label for="password">Password</label>
+            <span *ngIf="form.get('password')?.touched && !form.get('password')?.valid"><i>Password is required!!!!</i></span>
+            <input type="password" id="password" formControlName="password" placeholder="Password"required>
+            <a [routerLink]="['/forgotpassword']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><p>Forgot Password?</p></a>
+            <button type="submit">LOG IN</button><!-- redirect when the credentials are checked --> <!--DONE-->
+        </form>
+    </div>
+    <div class="image">
+    </div>
+</div>
+

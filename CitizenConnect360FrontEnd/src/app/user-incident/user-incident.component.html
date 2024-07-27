@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="navbar">
+        <!-- <p>Left Side</p> -->
+        <div class="image">
+            <!-- fag of kenya image -->
+        </div>
+        <div class="logo">
+            <a [routerLink]="['']"><p>CITIZEN<br>CONNECT 360</p></a>
+        </div>
+        <div class="menu">
+            <div class="dashboard">
+                <img src="../../assets/dashboard-solid-24.png"><a [routerLink]="['/userdashboard']">Dashboard</a>
+            </div>
+            <div class="educate">
+                <img src="../../assets/book-regular-24.png"><a [routerLink]="['/user-educate']">Educate</a>
+            </div>
+            <div class="incident">
+                <img src="../../assets/alarm-exclamation-regular-24.png"><a [routerLink]="['/user-incident']">Incident</a>
+            </div>
+            <div class="polls">
+                <img src="../../assets/poll-regular-24.png"><a [routerLink]="['/user-polls']">Polls</a>
+            </div>
+            <div class="views">
+                <img src="../../assets/conversation-regular-24.png"><a [routerLink]="['/user-views']">Views</a>
+            </div>
+        </div>
+        <div class="hamburger" (click)="toggleNav()">
+            <span class="resp"></span>
+            <span class="resp"></span>
+            <span class="resp"></span> 
+        </div>
+        <div class="responsivenav" *ngIf="shownav">
+            <a [routerLink]="['/userdashboard']">Dashboard</a>
+            <a [routerLink]="['/user-educate']">Educate</a>
+            <a [routerLink]="['/user-incident']">Incident</a>
+            <a [routerLink]="['/user-polls']">Polls</a>
+            <a [routerLink]="['/user-views']">Views</a>
+        </div>
+        <div class="logout">
+            <a (click)="delete()">Log Out</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="body">
+            <h2>REPORTED INCIDENTS</h2>
+            <div class="title">
+                <p>Multimedia</p>
+                <p>Name</p>
+                <p>Description</p>
+                <p>Location</p>
+            </div>
+            <div class="reportedincidents" *ngIf="incidents$ |async as incidents">
+                    <div class="repincident" *ngFor="let incident of incidents">
+                        <img src="{{incident.multimedia}}">
+                        <p>{{incident.username}}</p>
+                        <p>{{incident.incidentDescription}}</p>
+                        <p>{{incident.incidentLocation}}</p>
+                    </div>
+            </div>
+        </div>
+        <div class="addbutton">
+            <div class="text">
+                <p>Would you like to report an incident?</p>
+            </div>
+            <div class="button">
+                <a [routerLink]="['/incidentform']">Add incident</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="navbar">
+        <!-- <p>Left Side</p> -->
+        <div class="image">
+            <!-- fag of kenya image -->
+        </div>
+        <div class="logo">
+            <a [routerLink]="['']"><p>CITIZEN<br>CONNECT 360</p></a>
+        </div>
+        <div class="menu">
+            <div class="dashboard">
+                <img src="../../assets/dashboard-solid-24.png"><a [routerLink]="['/govdashboard']">Dashboard</a>
+            </div>
+            <div class="incident">
+                <img src="../../assets/alarm-exclamation-regular-24.png"><a [routerLink]="['/govincident']">Incident</a>
+            </div>
+            <div class="polls">
+                <img src="../../assets/poll-regular-24.png"><a [routerLink]="['/govpolls']">Polls</a>
+            </div>
+            <div class="views">
+                <img src="../../assets/conversation-regular-24.png"><a [routerLink]="['/govviews']">Views</a>
+            </div>
+        </div>
+        <div class="hamburger" (click)="toggleNav()">
+            <span class="resp"></span>
+            <span class="resp"></span>
+            <span class="resp"></span> 
+        </div>
+        <div class="responsivenav" *ngIf="shownav">
+            <a [routerLink]="['/govdashboard']">Dashboard</a>
+            <a [routerLink]="['/govincident']">Incident</a>
+            <a [routerLink]="['/govpolls']">Polls</a>
+            <a [routerLink]="['/govviews']">Views</a>
+        </div>
+        <div class="logout">
+            <a (click)="delete()">Log Out</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="title">
+            <p>CREATED POLLS</p>
+            <a [routerLink]="['/govcreatepoll']">Create Poll</a>
+        </div>
+        <div class="pollcards">
+            <div class="onepoll">
+                <p class="question"><strong><u>Question</u></strong><br></p>
+                <p>What do you think about the president sending the cabinet ministers home?</p>
+                <a [routerLink]="['/govpollsresults']" class="vote">View Results</a>
+                <button class="vote">Delete Poll</button>
+            </div>
+            <div class="onepoll">
+                <p class="question"><strong><u>Question</u></strong><br></p>
+                <p>What do you think about the president sending the cabinet ministers home?</p>
+                <a [routerLink]="['/govpollsresults']" class="vote">View Results</a>
+                <button class="vote">Delete Poll</button>
+            </div>
+        </div>
+    </div>
+</div>
+

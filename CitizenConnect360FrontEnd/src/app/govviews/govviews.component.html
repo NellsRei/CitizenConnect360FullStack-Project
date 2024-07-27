@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="navbar">
+        <!-- <p>Left Side</p> -->
+        <div class="image">
+            <!-- fag of kenya image -->
+        </div>
+        <div class="logo">
+            <a [routerLink]="['']"><p>CITIZEN<br>CONNECT 360</p></a>
+        </div>
+        <div class="menu">
+            <div class="dashboard">
+                <img src="../../assets/dashboard-solid-24.png"><a [routerLink]="['/govdashboard']">Dashboard</a>
+            </div>
+            <div class="incident">
+                <img src="../../assets/alarm-exclamation-regular-24.png"><a [routerLink]="['/govincident']">Incident</a>
+            </div>
+            <div class="polls">
+                <img src="../../assets/poll-regular-24.png"><a [routerLink]="['/govpolls']">Polls</a>
+            </div>
+            <div class="views">
+                <img src="../../assets/conversation-regular-24.png"><a [routerLink]="['/govviews']">Views</a>
+            </div>
+        </div>
+        <div class="hamburger" (click)="toggleNav()">
+            <span class="resp"></span>
+            <span class="resp"></span>
+            <span class="resp"></span> 
+        </div>
+        <div class="responsivenav" *ngIf="shownav">
+            <a [routerLink]="['/govdashboard']">Dashboard</a>
+            <a [routerLink]="['/govincident']">Incident</a>
+            <a [routerLink]="['/govpolls']">Polls</a>
+            <a [routerLink]="['/govviews']">Views</a>
+        </div>
+        <div class="logout">
+            <a (click)="delete()">Log Out</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1><u>THE PEOPLES VIEWS</u></h1>
+        <div class="toppart">
+            <div class="addview">
+                <p>Username</p>
+                <button (click)="addPost()">Add Post</button>
+            </div>
+            <div class="addviewbtn">
+                <input type="text" placeholder="Start a thread" #inputRef [(ngModel)]="statement">
+            </div>
+        </div>
+        <div class="posts" *ngIf="(posts$|async)">
+            <hr>
+            <br>
+            <div class="post" *ngFor="let post of posts$|async">
+                <p>{{post.postDescription}}</p>
+                <div class="nameanddel">
+                    <p><i><b>By {{post.username}}<br>{{post.formattedDateTime}}</b></i></p>
+                </div>  
+            </div>
+        </div>
+        <div class="summarize">
+                <div class="text">
+                    <p>Would you like to summarize the views?</p>
+                </div>
+                <div class="button">
+                    <a [routerLink]="['']">Summarize views</a>
+                </div>
+        </div>
+    </div>
+</div>
+

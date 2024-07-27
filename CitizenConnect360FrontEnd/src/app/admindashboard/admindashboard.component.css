@@ -1,0 +1,286 @@
+/* for the whole container */
+.container{
+    display: flex;
+    width: 100vw;
+    font-family: "Encode Sans", sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+}
+/* for the left-side */
+.navbar{
+    width: 20%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    background-image: url("../../assets/anotherkenyanflag.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30%;
+
+}
+.logo a{
+  display: flex;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+.menu{
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   padding: 10px;
+   font-size: large;
+   margin-left: 30px;
+   margin-top: 20px;
+
+}
+.dashboard, .users, .userapproval{
+    display: flex;
+    align-items: center;
+}
+.dashboard a, .users a, .userapproval a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+.logout a{
+    display: flex;
+    padding: 15px;
+    border-radius: 40px;
+    background-color: #006D24;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+    justify-content: center;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+/* for the right-side */
+.content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.welcome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+}
+.welcome a{
+    display: flex;
+    padding: 15px;
+    border-radius: 40px;
+    background-color: #F90120;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+    justify-content: center;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.userinfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.stats p{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 800;
+}
+.cardlist{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    gap: 20px;
+    justify-content: center;
+}
+.card{
+    border-radius: 40px;
+    background-color: #006D24;
+    height: 30vh;
+    border: 1px solid black;
+    width: 20vw;
+    color: white;
+    line-height: 60px; 
+}
+.card p{
+    text-align: center;
+     
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 15px;
+  margin-left: 30px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.responsivenav{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+.responsivenav a{
+  text-decoration: none;
+  font-size: medium;
+  color: white;
+}
+@media (max-width: 936.98px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+  }
+  .navbar {
+    width: 100%;
+    height: auto;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    font-size: large;
+    margin-left: 30px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu.active {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .content {
+    width: 100%;
+  }
+  .cardlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    text-wrap: wrap;
+    font-size: small;
+    height: 20vh;
+    width: 20vw;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .logout a{
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+  }
+  .navbar {
+    width: 100%;
+    height: auto;
+  }
+  .welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .welcome h2 {
+    font-size: large;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+  .welcome a {
+    display: flex;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #f90120;
+    color: white;
+    text-decoration: none;
+    width: 20px;
+    justify-content: center;
+  }
+
+  .menu {
+    display: none;
+    font-size: medium;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .logout a,
+  .welcome a {
+    width: 60%;
+    margin: 10px 0;
+  }
+
+  .welcome {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .userinfo {
+    flex-direction: column;
+  }
+
+  .cardlist {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .card {
+    text-wrap: wrap;
+    font-size: small;
+    height: 20vh;
+    width: 40vw;
+    line-height: 30px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+  .userinfo{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    gap: 10px;
+  }
+}

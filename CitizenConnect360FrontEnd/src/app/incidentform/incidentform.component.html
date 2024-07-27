@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="form">
+        <div class="homelink">
+            <div class="link">
+                <a [routerLink]="['/user-incident']">Citizen<br>Connect360</a>
+            </div>
+            <h1>REPORT INCIDENT</h1>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+            <label for="email">Email</label>
+            <span *ngIf="form.get('email')?.touched && !form.get('email')?.valid"><i>Email is required!!!!</i></span>
+            <input type="email" formControlName="email" placeholder="Email" required>
+            <label for="email">Description</label>
+            <span *ngIf="form.get('description')?.touched && !form.get('description')?.valid"><i>Description is required!!!!</i></span>
+            <input type="text" formControlName="description" placeholder="Description"  required>
+            <p><b>OPTIONAL:</b></p>
+            <label for="multimedia">Attach an image/video/audio</label>
+            <input type="text" formControlName="multimedia" placeholder="Multimedia" required>
+            <div class="terms">
+                <input type="checkbox" name="terms" id="terms">
+                <label for="terms">I agree to submiting the multimedia format</label>
+            </div>
+            <button [disabled]="!form.valid" type="submit">REPORT</button>
+        </form>
+    </div>
+    <div class="image">
+        <div class="actualimage"></div>
+    </div>
+</div>
+

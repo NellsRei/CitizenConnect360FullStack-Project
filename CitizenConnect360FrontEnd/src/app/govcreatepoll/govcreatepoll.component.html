@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="form">
+        <div class="homelink">
+            <div class="link">
+                <a [routerLink]="['/govdashboard']">Citizen<br>Connect360</a>
+            </div>
+            <h1>CREATE POLL</h1>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+            <label for="question">Question</label>
+            <span *ngIf="form.get('question')?.touched && !form.get('question')?.valid"><i>Question is required!!!!</i></span>
+            <input type="text" formControlName="question" placeholder="Question" required>
+            <label for="choice1">Choice 1</label>
+            <span *ngIf="form.get('choice1')?.touched && !form.get('choice1')?.valid"><i>Choice 1 is required!!!!</i></span>
+            <input type="text" formControlName="choice1" placeholder="Choice 1" required>
+            <label for="choice2">Choice 2</label>
+            <span *ngIf="form.get('choice2')?.touched && !form.get('choice2')?.valid"><i>Choice 2 is required!!!!</i></span>
+            <input type="text" formControlName="choice2" placeholder="Choice 2" required>
+            <button [disabled]="!form.valid" type="submit">CREATE</button>
+        </form>
+    </div>
+    <div class="image">
+    </div>
+</div>
+
+

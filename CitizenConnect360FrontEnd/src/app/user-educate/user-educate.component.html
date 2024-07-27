@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="navbar">
+        <!-- <p>Left Side</p> -->
+        <div class="image">
+            <!-- fag of kenya image -->
+        </div>
+        <div class="logo">
+            <a [routerLink]="['']"><p>CITIZEN<br>CONNECT 360</p></a>
+        </div>
+        <div class="menu">
+            <div class="dashboard">
+                <img src="../../assets/dashboard-solid-24.png"><a [routerLink]="['/userdashboard']">Dashboard</a>
+            </div>
+            <div class="educate">
+                <img src="../../assets/book-regular-24.png"><a [routerLink]="['/user-educate']">Educate</a>
+            </div>
+            <div class="incident">
+                <img src="../../assets/alarm-exclamation-regular-24.png"><a [routerLink]="['/user-incident']">Incident</a>
+            </div>
+            <div class="polls">
+                <img src="../../assets/poll-regular-24.png"><a [routerLink]="['/user-polls']">Polls</a>
+            </div>
+            <div class="views">
+                <img src="../../assets/conversation-regular-24.png"><a [routerLink]="['/user-views']">Views</a>
+            </div>
+        </div>
+        <div class="hamburger" (click)="toggleNav()">
+            <span class="resp"></span>
+            <span class="resp"></span>
+            <span class="resp"></span> 
+        </div>
+        <div class="responsivenav" *ngIf="shownav">
+            <a [routerLink]="['/userdashboard']">Dashboard</a>
+            <a [routerLink]="['/user-educate']">Educate</a>
+            <a [routerLink]="['/user-incident']">Incident</a>
+            <a [routerLink]="['/user-polls']">Polls</a>
+            <a [routerLink]="['/user-views']">Views</a>
+        </div>
+        <div class="logout">
+            <a (click)="delete()">Log Out</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="bills">
+            <p>Which bill do you want to know about?</p>
+            <ol type="1">    <!-- numbered list -->
+                <li>Bill 1</li>
+                <li>Bill 2</li>
+                <li>Bill 3</li>
+            </ol>
+        </div>
+        <div class="chat">
+            <input type="text" placeholder="Ask me anything about the bill" required>
+            <div class="questionmark">
+                <button>?</button>
+            </div>
+        </div>
+    </div>
+</div>
